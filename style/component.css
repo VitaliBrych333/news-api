@@ -1,0 +1,84 @@
+a {
+  font-family: BehrensModern, sans-serif;
+  font-size: 24px;
+  color: rgb(173, 55, 34); 
+  font-weight: bold; 
+}
+
+a:hover {
+  -webkit-transition: color 0.5s ease-in-out;
+  -moz-transition: color 0.5s ease-in-out;
+  -ms-transition: color 0.5s ease-in-out;
+  -o-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out; 
+  color: rgb(197, 187, 43);
+}
+
+.about {
+  padding: 15px 10px;
+}
+
+.about p:last-child, .about p span {
+  font-family: Lato-Regular, sans-serif;
+  font-size: 20px;
+  color: rgb(95, 67, 170);
+  margin-bottom: 13px; 
+}
+
+.about p:last-child {
+  font-size: 16px;
+}
+
+.about p i {
+  font-size: 30px;
+  color: rgb(187, 50, 31);
+}
+
+.picture img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 270px;
+}
+
+.item {
+  display: inline-block;
+  position: relative;
+  width: 270px;
+  height: 396px;
+  border: 3px solid rgb(243, 89, 89);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 28px 60px 30px;  
+  background-color: rgb(136, 230, 230);
+}
+
+.item:hover {
+  transform: scale(1.2); 
+  border: 3px solid rgb(113, 196, 19);
+  -webkit-transition: border 0.5s ease-in-out;
+  -moz-transition: border 0.5s ease-in-out;
+  -ms-transition: border 0.5s ease-in-out;
+  -o-transition: border 0.5s ease-in-out;
+  transition: border 0.5s ease-in-out;
+}
+
+.title {
+  position: absolute; 
+  display: inline-block;
+  text-align: center;
+  margin: -130px;
+  width: 254px;
+}
+
+.about p span {
+  width: 210px;
+  display: inline-block;
+  text-align: center;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 384px) {
+  .item:hover {
+    transform: none; 
+  }
+}

@@ -1,0 +1,74 @@
+.paging {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.page {
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+  font-family: Lato-Regular, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  display: inline-block;
+  margin-right: 7px;
+}
+
+.page:hover {
+  cursor: pointer;
+}
+
+.active {
+  background-color: blue;
+}
+
+.popuptext {
+  opacity: 0;
+  width: 85px;
+  border: 2px solid red;
+  height: 17px;
+  font-family: Lato-Regular, sans-serif;
+  font-size: 12px;
+  position: absolute;
+  margin: -29px 0px 0 -38px;
+  border-radius: 8px;
+  background: red;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+}
+
+@media screen and (max-width: 509px) {
+  .page {
+    width: 15px;
+    height: 15px;   
+    font-size: 10px;   
+    margin-right: 4px;
+  }
+
+  .active {
+    background-color: blue;
+  }
+
+  .popuptext {
+    font-size: 10px;
+    width: 50px;
+    height: 22px;   
+  }
+}
+
+@media screen and (max-width: 411px) {
+  .paging {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+}
