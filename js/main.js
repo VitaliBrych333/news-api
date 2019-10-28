@@ -1,4 +1,4 @@
-import { API } from './components/globalVar';
+import { API } from './components/api';
 import setSources from './components/setSources';
 
 async function getSources() {

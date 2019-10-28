@@ -1,9 +1,14 @@
 import search from './search';
 import drawArticles from './drawArticles';
+import { setCurrentData } from './showArticles';
 
-function draw() {
-    search().then((res) => { drawArticles(res, 0, 10); });
+function drawFirstArticles() {
+    search().then((res) => {
+        drawArticles(res, 0, 10);
+        setCurrentData(res, 0, 10);
+    }, (err) => { console.log(err); });
 }
+
 export default function setSources(sources) {
     document.querySelector('#sources').innerHTML = '';
     sources.forEach((item) => {
@@ -13,5 +18,5 @@ export default function setSources(sources) {
     });
     document.querySelector('#sources').disabled = false;
     document.querySelector('#search').disabled = false;
-    document.querySelector('#search').addEventListener('click', draw);
+    document.querySelector('#search').addEventListener('click', drawFirstArticles);
 }

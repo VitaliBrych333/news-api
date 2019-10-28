@@ -1,4 +1,3 @@
-import search from './search';
 import { creteButtonSwowLastArticles, createButtonNext } from './createButtons';
 
 export default function drawArticles(articles, startNum, endNum) {
@@ -8,14 +7,12 @@ export default function drawArticles(articles, startNum, endNum) {
         creteButtonSwowLastArticles();
     }
 
-    if (length > 10 && !document.querySelector('#next')) {
+    if (length > 10 && !document.querySelector('#next') && endNum !== length) {
         createButtonNext();
     }
 
     document.querySelector('.articles').innerHTML = '';
-    // let articles;
-    // search().then((res) => {
-    // articles = res;
+
     articles.slice(startNum, endNum).forEach((item) => {
         const newDiv = document.createElement('div');
         newDiv.innerHTML = `<div>
@@ -29,5 +26,4 @@ export default function drawArticles(articles, startNum, endNum) {
             </div>`;
         document.querySelector('.articles').appendChild(newDiv);
     });
-    // });
 }
