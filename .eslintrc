@@ -2,15 +2,20 @@
   "parser": "babel-eslint",
     "rules": {
       "linebreak-style": 0,
-      "indent": ["error", 4],      
+      "indent": ["error", 4],
       "prefer-destructuring": ["error", {"object": false, "array": false}],
       "no-use-before-define":  ["error", { "functions": false }],
       "no-param-reassign": 0,
-      "arrow-body-style": ["error", "never"],
+      "arrow-body-style": ["error", "as-needed", { "requireReturnForObjectLiteral": true }],
       "no-shadow": ["error", { "builtinGlobals": false, "hoist": "functions", "allow": [] }],
-      "quote-props": ["error", "consistent"],      
+      "quote-props": ["error", "consistent"],
       "no-console": 0,
-      "no-inner-declarations": "error"    
+      "no-inner-declarations": "error",
+      "no-ternary": 0,
+      "no-nested-ternary": 0,
+      "no-unused-vars": 0,
+      "import/no-mutable-exports": 0,
+      "prefer-const": 0
   },
   "extends": ["airbnb-base"],
   "env": {
